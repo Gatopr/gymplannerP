@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+}
+/* Definições gerais do corpo da página */
+body {
+  /* Configuração do plano de fundo */
+  background-image: url("https://th.bing.com/th/id/R.6fb919a79e342539288b0ec884337e55?rik=pknx6EjMmfIHxg&riu=http%3a%2f%2fwww.actionacademia.com.br%2fbackground2.jpg&ehk=0laZVmk3O3KhZYQuOJlHhreCcjEIzycAMyX9zw9DGt4%3d&risl=&pid=ImgRaw&r=0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Configurações de fonte e margem */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+header {
+  /* Estilo do fundo do cabeçalho */
+  background-color: green;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Barra de navegação */
+.nav-bar {
+  /* Centraliza os elementos na barra de navegação */
+  display: flex;
+  justify-content:flex-start;
+  position: relative;
+}
+
+.nav-bar a {
+  /* Estilo dos links da barra de navegação */
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.nav-bar a.menu-inicial {
+  /* Estilo do primeiro link da barra de navegação */
+  margin-left: 0;
+}
+
+.nav-bar a:hover {
+  /* Estilo ao passar o mouse sobre os links da barra de navegação */
+  text-decoration: underline;
+  color: white;
+}
+
+.nav-bar img {
+  /* Estilo das imagens na barra de navegação */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Conteúdo do dropdown/cabeçalho */
+.dropdown-content {
+  /* Oculta o conteúdo do dropdown */
+  display: none;
+  position: absolute;
+  background-color: green;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  /* Exibe o conteúdo do dropdown ao passar o mouse sobre o elemento pai */
+  display: block;
+}
+
+.dropdown-content a {
+  /* Estilo dos links no conteúdo do dropdown */
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.dropdown-content a:hover {
+  /* Estilo ao passar o mouse sobre os links no conteúdo do dropdown */
+  background-color: #003300;
+}
+
+.hamburger {/*Opções ocultas do dropdown*/
+  /* Esconde o ícone de menu */
+  display: none;
+}
+
+/* Estilos para telas menores (responsividade) */
+@media screen and (max-width: 768px) {
+  .nav-bar a:not(:first-child) {
+      /* Esconde os links, exceto o primeiro, em telas menores */
+      display: none;
+  }
+
+  .nav-bar a.menu-inicial {
+      /* Estilo do primeiro link em telas menores */
+      margin-left: 10px;
+  }
+
+  .hamburger {
+      /* Estilo do ícone de menu em telas menores */
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+  }
+
+  .hamburger .line {
+      /* Estilo das linhas do ícone de menu em telas menores */
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+  }
+
+  .dropdown-content {
+      /* Estilo do conteúdo do dropdown em telas menores */
+      position: static;
+      display: none;
+      background-color: green;
+      padding: 12px 16px;
+  }
+
+  .dropdown-content a {
+      /* Estilo dos links no conteúdo do dropdown em telas menores */
+      display: block;
+      padding: 5px 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+      /* Esconde o conteúdo do dropdown ao passar o mouse sobre o elemento pai em telas menores */
+      display: none;
+  }
+
+  .dropdown:hover .dropdown-content.show {
+      /* Exibe o conteúdo do dropdown ao passar o mouse sobre o elemento pai em telas menores */
+      display: block;
+  }
+}
+
+/* Estilos para o título */
+h1 {
+  /* Estilo do título */
+  text-align: center;
+  margin-top: 5%;
+  color: black;
+  background-color: white;
+  width: 20%;
+  border-radius: 30px;
+  margin-left: 40%;
+  background: rgb(35, 236, 62);
+  background: linear-gradient(0deg, rgba(35, 236, 92, 0.33657212885154064) 26%, rgba(114, 245, 92, 1) 98%);
+}
+
+/* Estilos para o formulário */
+form {
+  /* Configurações do formulário */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+  background: rgb(35, 236, 92);
+  background: linear-gradient(0deg, rgba(35, 236, 92, 0.33657212885154064) 26%, rgba(114, 245, 92, 1) 98%);
+}
+
+/* Estilo para campos de número e altura */
+input[type="number"],
+#altura {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o botão de calcular */
+button[type="button"] {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4%;
+  margin-left: 37%;
+}
+
+button[type="button"]:hover {
+  background-color: rgb(12, 197, 89);
+}
